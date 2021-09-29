@@ -10,25 +10,25 @@ import Routes from './routes';
 import './index.css';
 
 const App = () => {
-    return (
-        <Provider store={ store }>
-            <ConnectedRouter history={ history }>
-                <Routes />
-            </ConnectedRouter>
-        </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <Routes />
+      </ConnectedRouter>
+    </Provider>
+  );
 };
 
 const renderApp = () => {
-    const rootElement = document.getElementById('root');
-    const renderedElement = (
-        <App />
-    );
-    if (rootElement.hasChildNodes()) {
-        hydrate(renderedElement, rootElement);
-    } else {
-        render(renderedElement, rootElement);
-    }
+  const rootElement = document.getElementById('root');
+  const renderedElement = (
+    <App />
+  );
+  if (rootElement.hasChildNodes()) {
+    hydrate(renderedElement, rootElement);
+  } else {
+    render(renderedElement, rootElement);
+  }
 };
 
 renderApp();

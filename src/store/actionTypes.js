@@ -2,7 +2,7 @@ import { createActions } from 'redux-actions';
 import actionsTest from './test/actionTypes';
 
 const types = [
-    ...actionsTest,
+  ...actionsTest,
 ];
 
 export default createActions(...types);

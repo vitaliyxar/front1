@@ -1,5 +1,5 @@
 const types = [
-    'CHANGE_TEST_VALUE',
+  'CHANGE_TEST_VALUE',
 ];
 
 export default types;

@@ -6,8 +6,8 @@ import test from './test/reducer';
 export const history = createBrowserHistory();
 
 const staticReducers = {
-    router: connectRouter(history),
-    test,
+  router: connectRouter(history),
+  test,
 };
 
 export default staticReducers;

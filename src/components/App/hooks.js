@@ -5,25 +5,25 @@ import selectors from '../../store/selector';
 import action from '../../store/actionTypes';
 
 export const useApp = () => {
-    const dispatch = useDispatch();
-    const testValue = useSelector(selectors.selectorsTest.getTestValue);
-    
-    const [newValue, setNewValue] = useState('');
+  const dispatch = useDispatch();
+  const testValue = useSelector(selectors.selectorsTest.getTestValue);
 
-    const onChangeNewValue = (event) => {
-        const value = event?.target?.value || '';
-        setNewValue(value);
-    };
+  const [newValue, setNewValue] = useState('');
 
-    const onChangeTestValue = () => {
-        dispatch(action.changeTestValue(newValue));
-    };
+  const onChangeNewValue = (event) => {
+    const value = event?.target?.value || '';
+    setNewValue(value);
+  };
 
-    return {
-        testValue,
-        onChangeNewValue,
-        onChangeTestValue,
-    };
+  const onChangeTestValue = () => {
+    dispatch(action.changeTestValue(newValue));
+  };
+
+  return {
+    testValue,
+    onChangeNewValue,
+    onChangeTestValue,
+  };
 };
 
 export default useApp;

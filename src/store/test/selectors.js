@@ -1,7 +1,7 @@
 const getTestValue = (state) => state.test.test;
 
 const selectors = {
-    getTestValue,
+  getTestValue,
 };
 
 export default selectors;
