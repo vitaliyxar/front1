@@ -1,4 +1,5 @@
-const reducerGenerator = (initialState, handlers) =>
+const reducerGenerator =
+  (initialState, handlers) =>
   (state = initialState, { type, payload }) => {
     const handler = handlers[type];
     return handler ? handler(state, payload) : state;
