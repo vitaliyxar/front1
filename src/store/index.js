@@ -6,9 +6,7 @@ import reducers, { history } from './reducer';
 import { sagaMiddleware } from './middleware';
 import sagas from './sagas';
 
-const createReducer = () => combineReducers({
-  ...reducers,
-});
+const createReducer = () => combineReducers({ ...reducers });
 
 const configureStore = (preloadedState = {}) => {
   const middlewares = [sagaMiddleware, routerMiddleware(history)];
@@ -17,11 +15,7 @@ const configureStore = (preloadedState = {}) => {
   const enhancers = [middlewareEnhancer];
   const composedEnhancers = composeWithDevTools(...enhancers);
 
-  const store = createStore(
-    createReducer(),
-    preloadedState,
-    composedEnhancers,
-  );
+  const store = createStore(createReducer(), preloadedState, composedEnhancers);
 
   sagaMiddleware.run(sagas);
 
