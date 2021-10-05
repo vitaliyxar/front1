@@ -9,15 +9,13 @@ import Routes from './routes';
 
 import './index.css';
 
-const App = () => {
-  return (
-    <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <Routes />
-      </ConnectedRouter>
-    </Provider>
-  );
-};
+const App = () => (
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <Routes />
+    </ConnectedRouter>
+  </Provider>
+);
 
 const renderApp = () => {
   const rootElement = document.getElementById('root');
