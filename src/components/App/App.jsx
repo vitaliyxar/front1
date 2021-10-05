@@ -16,9 +16,7 @@ const App = () => {
         Введите новое тест-слово:
         <input onChange={hook.onChangeNewValue} />
       </div>
-      <button type='button' onClick={hook.onChangeTestValue}>
-        Сохранить
-      </button>
+      <button onClick={hook.onChangeTestValue}>Сохранить2</button>
     </div>
   );
 };
