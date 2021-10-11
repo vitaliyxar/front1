@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useApp } from './hooks';
-import styles from './App.css';
+import styles from './App.module.css';
 
 const App = () => {
   const hook = useApp();
