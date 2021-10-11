@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { render, hydrate } from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
 
-import { history } from './store/reducer';
+import { history } from './store';
 import store from './store/index';
 import Routes from './routes';
 
@@ -22,7 +22,7 @@ const App = () => {
 const renderApp = () => {
   const rootElement = document.getElementById('root');
   const renderedElement = <App />;
-  if (rootElement.hasChildNodes()) {
+  if (rootElement?.hasChildNodes()) {
     hydrate(renderedElement, rootElement);
   } else {
     render(renderedElement, rootElement);
